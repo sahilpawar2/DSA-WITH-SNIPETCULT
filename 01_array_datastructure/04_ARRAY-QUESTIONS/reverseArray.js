@@ -1,37 +1,38 @@
-// function reverseArray(arr, k){
-//     for (let i = 0; i < arr.length; i += k) {
-//         let start = i
-//         let end = i + k-1 
+// function reverseSubArr(nums, k){
+//     let n = nums.length 
+//     for (let i = 0; i < n-1; i += k) {
+//         let start = i;
+//         let end = k + i -1
 //         let temp;
-//         while (start < end) {
-//             temp = arr[start];
-//             arr[start] = arr[end]
-//             arr[end] = temp
+//         while(start< end){
+//             temp = nums[start]
+//             nums[start] = nums[end]
+//             nums[end] = temp
 //             start++
 //             end--
 //         }
         
 //     }
-//     return arr
+//     return nums
 // }
 
-// console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9] , 3))
+// console.log(reverseSubArr([1, 2, 3, 4, 5, 6, 7, 8, 9] , 3))
 
 
-// function pairSum(arr, target){
-//     let n = arr.length
-//     let res;
-//     for (let i = 0; i < n; i++) {
-//         for (let j = i+1; j < n; j++) {
-//             if(arr[i]+ arr[j] == target){
-//                 res =[i, j]
-//             }
-//         }
-        
-//     }
-//     return res
-// }
-// console.log(pairSum([11, 15, 2, 7,], 9))
+function pairSum(nums, target){
+    let n = nums.length
+    for (let i = 0; i < n-1; i++) {;
+        let j = i+1;
+        while(j< n){
+            if(nums[i] + nums[j] === target){
+                return [i, j]
+            }
+            j++
+        }
+    }
+    return
+}
+console.log(pairSum([11, 15, 2, 7,], 9))
 
 let majorityElement = function(nums) {
     let mojority = 0

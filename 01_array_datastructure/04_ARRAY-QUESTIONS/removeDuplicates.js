@@ -1,16 +1,18 @@
 //Best Approach ; time complexity = O(n)
+
 function removeDuplicates(nums){
-    if(nums.length == 0) return 0;
-    let i = 0;
-    for (let j = 1; j < nums.length; j++) {
-        if(nums[j] !== nums[i]){
-            i++;
+    let n = nums.length
+    let i = 0
+    for (let j = 1; j < n; j++) {
+        if(nums[i] !== nums[j]){
+            i++
             nums[i] = nums[j]
         }
     }
-    nums.length = i+ 1
-    return nums.length
+    nums.length = i+1
+    return nums
 }
+
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 //explaination of the above approch
 // [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
@@ -29,20 +31,21 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
 //Worst approach; time complexity = O(n^2)
 // function removeDuplicates(nums){
-//     let i = 0
-//     while(i< nums.length){
-//         let j = i +1
-//         while (j < nums.length) {
-//             if (nums[i] === nums[j]) {
+//     let n = nums.length
+//     for(let i =0; i< n; i++){
+//         let j = i+1;
+//         while(j< nums.length){  // nums.length become shorter after every splice
+//             if(nums[j]=== nums[i]){
 //                 nums.splice(j, 1)
-//             }else{
+//             }
+//             else{
 //                 j++
 //             }
 //         }
-//         i++
 //     }
 //     return nums.length
 // }
+
 // console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
 // let fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
