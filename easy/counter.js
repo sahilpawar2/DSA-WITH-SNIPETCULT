@@ -221,17 +221,74 @@
 // console.log(pyramid(50))
 
 
-let a = [1, 2, 4, 5, 76,6];
-let large = -Infinity
-let small = Infinity
-for (let i = 0; i < a.length; i++) {
-     if(a[i] < small){
-      small =i;
-     }
-     if(a[i] > large){
-      large = i
-     }  
-}
-console.log("SMALLEST VAL = ",small,"INDEX")
-console.log("LARGEST VAL = ",large, "INDEX") 
+// let a = [1, 2, 4, 5, 76,6];
+// let large = -Infinity
+// let small = Infinity
+// for (let i = 0; i < a.length; i++) {
+//      if(a[i] < small){
+//       small =i;
+//      }
+//      if(a[i] > large){
+//       large = i
+//      }  
+// }
+// console.log("SMALLEST VAL = ",small,"INDEX")
+// console.log("LARGEST VAL = ",large, "INDEX") 
 
+
+// function rectangle (str){
+//      let result = '';
+//      for(let i = 0; i< 5;  i++){
+          
+//           for (let j = 0; j < 5-i; j++) {
+//                result +=str
+//           }
+//           for (let k = 0; k < 5; k++) {
+//                result +=str
+//           }
+//           result += "\n"
+//      }
+//      return result
+// }
+
+// console.log(rectangle('w'));
+
+
+function pyramid(str, height) {
+     let result = ''; // Initialize an empty string to build the pyramid
+     for (let i = 0; i < height; i++) {
+          for (let j = 0; j < height -i -1; j++) {
+               result += ' ' }
+               for (let k = 0; k < (2*i+1); k++) {
+                   result += str
+               }
+               result += "\n"
+     }
+     
+     console.log(result);
+     
+ }
+ 
+ pyramid('*', 5); // Call the function with '*' and a height of 5
+
+//  function printCircle(radius) {
+//      let result = ''; // Initialize an empty string to build the circle
+ 
+//      // Loop through each row
+//      for (let y = -radius; y <= radius; y++) {
+//          // Loop through each column
+//          for (let x = -radius; x <= radius; x++) {
+//              // Calculate the distance from the center (0,0)
+//              if (Math.round(Math.sqrt(x * x + y * y)) === radius) {
+//                  result += '*'; // Print '*' for points on the circle
+//              } else {
+//                  result += ' '; // Print space for points not on the circle
+//              }
+//          }
+//          result += '\n'; // Move to the next line after each row
+//      }
+ 
+//      console.log(result); // Print the final circle
+//  }
+ 
+//  printCircle(5); // Call the function with a radius of 5

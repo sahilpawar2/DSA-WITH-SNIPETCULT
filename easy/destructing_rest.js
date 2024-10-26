@@ -71,11 +71,98 @@
 
 
 
-let obj ={}
-let obj6 = null
+// let obj ={}
+// let obj6 = null
 
-if (obj === obj6){
-    console.log('tt')
- }//else {
-//     console.log("false ");
+// if (obj === obj6){
+//     console.log('tt')
+//  }//else {
+// //     console.log("false ");
+// // }
+
+
+// function arrToObeject(arr){
+//     let arr2 = arr.flat()
+//     let obj = {}
+//     console.log(arr2[1])
+//     for (let i = 0; i < arr2.length; i+=2) {
+//         let a = arr2[i];
+//         let  b = arr2[i+1]
+//         obj[a] = b
+//     }
+//     return obj
 // }
+
+// console.log(arrToObeject([['a', 2], ['sahil', 3]]))
+
+
+// function evenArray(arr){
+//     let arr2 = arr.filter(num => num%2 ===0)
+
+//     return arr2
+// }
+
+// console.log(evenArray([1, 2, 3, 4, 5, 6, 7, 8, 9, ]))
+
+
+// function annagrams(arr){
+//     let arr2 = arr.map(str => str.split('').sort().join(''))
+//     let arr1 ;
+//     let rersult = []
+//     let count = 0
+//     for(let i = 0;  i < arr2.length; i++){
+//         for(let j = i+1; j < arr2.length; j++){
+//             // rersult.push(arr2[i], arr2[j])
+//             if(arr2[i] === arr2[j]){
+//                rersult.push([arr[i], arr[j]])
+//             }
+//         }
+//     }
+
+//     return rersult
+// }
+// console.log(annagrams(['cat', 'dog', 'tac', 'god']))
+
+
+// function groupAnagrams(strs) {
+//     let map = {};
+
+//     for (let str of strs) {
+//         // Sort the string characters and use as key
+//         let sortedStr = str.split('').sort().join('');
+//         console.log(sortedStr);
+        
+
+//         // If the key doesn't exist, create it; otherwise, push the anagram
+//         if (!map[sortedStr]) {
+//             map[sortedStr] = [];
+//         }
+//         map[sortedStr].push(str);
+//     }
+
+//     // Convert the map values to an array of grouped anagrams
+//     return Object.values(map);
+// }
+
+// console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+
+
+
+function findMissingNum(arr){
+    let start = 0
+    while (start < arr.lenght){
+        let end = start +1
+        let temp;
+        if (arr[start] > arr[end]) {
+            temp = arr[start]
+            arr[start] = arr[end]
+            arr[end] = temp
+            start++
+            end++
+        }
+        
+    }
+    return arr
+}
+
+console.log(findMissingNum([3, 0, 1]))
