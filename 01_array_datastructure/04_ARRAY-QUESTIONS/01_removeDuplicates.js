@@ -1,15 +1,16 @@
 //Best Approach ; time complexity = O(n)
 
 function removeDuplicates(nums){
-    let n = nums.length
+    let n = nums.length;
     let i = 0
-    for (let j = 1; j < n; j++) {
-        if(nums[i] !== nums[j]){
-            i++
+    let j = 1
+    while(j< n){
+        if(nums[i] !==  nums[j]){
+            i++;
             nums[i] = nums[j]
-        }
+        }j++
     }
-    nums.length = i+1
+    nums.length = n -i -1
     return nums
 }
 

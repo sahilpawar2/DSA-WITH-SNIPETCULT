@@ -38,7 +38,7 @@
 //     reverse(arr, start, end-1)
 //     return arr
 // }
-// console.log(rotate([1,2,3,4,5,6,7], 3))
+// console.log(rotate([1,2,3,4,5,6,7], 4))
 
 // function rotateleft(arr, k){
 //     let n = arr.length;
@@ -58,8 +58,10 @@
 //     }
 //     return arr
 // }
+// console.log(rotateleft([1,2,3,4,5,6,7], 4))
 // let arr3 = rotateleft([1,2,3,4,5,6,7], 3)
 // console.log(arr3)
+
 // function reverse(arr, start, end){
 //     while(start < end){
 //         let temp = arr[start];
@@ -97,29 +99,29 @@
 //     }
 //     return arr
 // }
-// console.log(rotateRight([1,2,3,4,5,6,7], 3))
+// console.log(rotateRight([1,2,3,4,5,6,7], 4))
 
-function reverse(arr, start, end){
-    while(start < end){
-        let temp = arr[start]
-        arr[start] = arr[end]
-        arr[end] = temp
-        start++;
-        end--;
-    }
-    return arr;
-}
+// function reverse(arr, start, end){
+//     while(start < end){
+//         let temp = arr[start]
+//         arr[start] = arr[end]
+//         arr[end] = temp
+//         start++;
+//         end--;
+//     }
+//     return arr;
+// }
 
-function rotateRight(arr, k){
-    start = 0;
-    end = arr.length 
-    k = k%end
-    reverse(arr, start, end-k-1);
-    reverse(arr, end-k, end-1)
-    reverse(arr, start, end-1)
-    return arr
-}
+// function rotateRight(arr, k){
+//     start = 0;
+//     end = arr.length 
+//     k = k%end
+//     reverse(arr, start, end-k-1);
+//     reverse(arr, end-k, end-1)
+//     reverse(arr, start, end-1)
+//     return arr
+// }
 
 
-let arr = [1, 2, 3, 4, 5, 6, 7]
-console.log(rotateRight(arr, 3))
+// let arr = [1, 2, 3, 4, 5, 6, 7]
+// console.log(rotateRight(arr, 3))
