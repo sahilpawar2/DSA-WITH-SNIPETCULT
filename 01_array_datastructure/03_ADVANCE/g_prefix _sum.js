@@ -1,20 +1,20 @@
-// function prefixSumArray(arr) {
-//     let prefix = new Array(arr.length);
-//     prefix[0] = arr[0];
-//     // console.log(prefix[0])
+function prefixSumArray(arr) {
+    let prefix = new Array(arr.length);
+    prefix[0] = arr[0];
+    // console.log(prefix[0])
   
-//     for (let i = 1; i < arr.length; i++) {
-//       prefix[i] = prefix[i - 1] + arr[i];
-//     //   console.log(prefix[i])
-//     }
+    for (let i = 1; i < arr.length; i++) {
+      prefix[i] = prefix[i - 1] + arr[i];
+    //   console.log(prefix[i])
+    }
   
-//     return prefix;
-//   }
+    return prefix;
+  }
   
-//   // Example usage:
-//   const arr1 = [1, 2, 3, 4, 5];
-//   const prefix = prefixSumArray(arr1);
-//   console.log(prefix); 
+  // Example usage:
+  const arr1 = [1, 2, 3, 4, 5];
+  const prefix = prefixSumArray(arr1);
+  console.log(prefix); 
   
 // function suffixSumArray(arr){
 //     let n = arr.length

@@ -1,3 +1,18 @@
+//Question :-> 
+/**Given an array arr of non-negative numbers. The task is to find the first equilibrium point 
+ * in an array.The equilibrium point in an array is an index (or position) such that the sum 
+ * of all elements before that index is the same as the sum of elements after it.
+
+Note: Return equilibrium point in 1-based indexing. Return -1 if no such point exists.  */
+
+// test cases :->
+/**
+ * Input: arr[] = [1, 3, 5, 2, 2]
+   Output: 3 
+   Explanation: The equilibrium point is at position 3 as the sum of elements before it 
+   (1+3) = sum of elements after it (2+2). 
+ */
+
 function equilibruimPoint(arr){
     let n = arr.length
     let totalSum = 0
