@@ -1,19 +1,19 @@
 function removeOccurence(nums, val) {
     let start = 0
-    let end = nums.length-1
-    while (start  <= end){
+    let end = nums.length-1;
+    while(start <= end){
+        let temp ;
         if(nums[start] === val){
-            let temp = nums[start]
+            temp = nums[start]
             nums[start] = nums[end]
             nums[end] = temp
-            end--  
+            end--
         }else{
-            start ++
+            start++
         }
     }
-    nums.length = end +1
+    nums.length = end + 1
     return nums
-    // return end + 1
     
 };
 

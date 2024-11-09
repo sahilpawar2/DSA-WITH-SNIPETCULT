@@ -15,7 +15,7 @@
 //[1, 2, 3, 7, 5]  //{curr =+ rp} rp++ // curr = 13     curr - lp  curr= 13 - 1  = 12  lp ++
 //          rp
 //    lp
-//[1, 2, 3, 7, 5]  //{curr =+ rp} rp++ // curr = 13     curr - lp  curr= 13 - 1  = 12
+//[1, 2, 3, 7, 5]  //{curr =+ rp} rp++ // curr = 13     curr - lp  curr= 13 - 2  = 11
 //          rp
 
 function subArrSum(arr, target){
@@ -26,16 +26,18 @@ function subArrSum(arr, target){
         currr += arr[right]
         while(currr > target && left <= right){
             currr -= arr[left]
+            console.log(currr)
             left++ 
         }
         if (currr === target) {
             return [left+1, right+1]
         }
+        
     }
     return index
 }
 
-console.log(subArrSum([26, 3, 28, 7], 52)) //[1, 2, 3, 7, 5]
+console.log(subArrSum([1, 3, 7, 5, 2], 12)) //[1, 2, 3, 7, 5], 12,   [26, 3, 28, 7] 52
 
 
 
