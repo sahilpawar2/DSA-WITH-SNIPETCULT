@@ -16,5 +16,5 @@ function binarySearch(arr, target) {
   return position;
 }
 let my = [12, 22, 44, 51, 52, 80, 100, 103, 560];
-let see = 12;
+let see =  12;
 console.log(binarySearch(my, see));
