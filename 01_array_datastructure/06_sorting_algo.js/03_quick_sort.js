@@ -1,24 +1,20 @@
 function quickSort(arr, start, end){
     if(start >= end) return;
     let pivot = partition(arr, start, end)
-    //left 
-    quickSort(arr, start, pivot-1)
+    //left
+    quickSort(arr, start, pivot-1);
     //right
-    quickSort(arr, pivot+1, end)
+    quickSort(arr, pivot+1, end);
 }
 function partition(arr, start, end){
     let slow = start
     for(let i = start; i< end; i++){
-        if(arr[i]< arr[end]){
-            let temp = arr[i]
-            arr[i] = arr[slow]
-            arr[slow]= temp
+        if(arr[i] < arr[end]){
+            [arr[i], arr[slow]] = [arr[slow], arr[i]]
             slow++
         }
     }
-    let temp = arr[end]
-    arr[end] = arr[slow]
-    arr[slow] = temp
+    [arr[slow], arr[end]] = [arr[end], arr[slow]]
     return slow
 }
 let arr2 = [5, 2, 9, 1, 7, 6]
